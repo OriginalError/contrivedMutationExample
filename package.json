@@ -1,0 +1,26 @@
+{
+  "name": "@originalerror/contrived-mutation-example",
+  "version": "0.0.1",
+  "description": "Contrived example to illustrate mutation testing",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "nyc mocha --reporter nyan",
+    "mutate": "./node_modules/.bin/stryker run",
+    "coverage": "nyc report --reporter=lcov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OriginalError/contrivedMutationExample.git"
+  },
+  "author": "OriginalError",
+  "license": "MIT",
+  "devDependencies": {
+    "@stryker-mutator/core": "4.6.0",
+    "@stryker-mutator/javascript-mutator": "4.0.0",
+    "@stryker-mutator/mocha-framework": "4.0.0",
+    "@stryker-mutator/mocha-runner": "4.6.0",
+    "coveralls": "3.1.0",
+    "mocha": "8.3.2",
+    "nyc": "15.1.0"
+  }
+}
