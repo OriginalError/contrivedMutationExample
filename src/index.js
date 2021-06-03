@@ -25,9 +25,9 @@ module.exports.longestWord = function(str) {
   if (!hasWords(arr)) return "";
 
   var result = arr[0];
-  for(var x = 1; x < arr.length; x++) {
-    if(result.length < arr[x].length) {
-      result = arr[x];
+  for(var i = 1; i < arr.length; i++) {
+    if(result.length < arr[i].length) {
+      result = arr[i];
     } 
   }
   return result;
