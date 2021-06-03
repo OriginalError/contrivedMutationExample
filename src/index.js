@@ -1,11 +1,11 @@
 'use strict';
 
 function isString(str) {
-  return typeof str !== "string";
+  return typeof str == "string";
 }
 
 function hasWords(arr) {
-  return arr === null;
+  return arr !== null;
 }
 
 /**
@@ -16,13 +16,13 @@ function hasWords(arr) {
  */
 module.exports.longestWord = function(str) {
   //null quick exit  
-  if (isString(str)) return "";
+  if (!isString(str)) return "";
 
   //Chunk that string into words
   var arr = str.match(/\w[a-z]{0,}/gi);
 
   //Empty string (or completely numeric string) quick exit
-  if (hasWords(arr)) return "";
+  if (!hasWords(arr)) return "";
 
   var result = arr[0];
   for(var x = 1; x < arr.length; x++) {
